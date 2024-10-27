@@ -61,6 +61,20 @@
 }
 .conatiner{
     height: 710px;
-    width: 100%;
-    background-color: black;
+    background-image: url("backg_img.jpg");
+    background-size: cover;
+}
+.img1{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(240, 233, 225);
+}
+.song_list{
+    background-color: aqua;
+    height: 50px;
+    width: 300px;
+    display: flex;
+}
+.songimg{
+    height: 28px;
 }
