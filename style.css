@@ -59,22 +59,21 @@
     font-size: 40px;
     padding: 8px 20px 0px 20px;
 }
-.conatiner{
+.container{
     height: 710px;
-    background-image: url("backg_img.jpg");
-    background-size: cover;
 }
-.img1{
-    height: 30px;
-    width: 100px;
-    background-color: rgb(240, 233, 225);
-}
-.song_list{
-    background-color: aqua;
+.song_items{
     height: 50px;
-    width: 300px;
+    width: 45%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: green;
+    border-radius: 25px;
+    margin-left: 50px;
 }
-.songimg{
-    height: 28px;
+.song_img{
+    height:40px;
+    width: 40px;
+    border-radius:50%;
 }
