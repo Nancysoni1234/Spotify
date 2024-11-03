@@ -5,19 +5,25 @@
  let songindex=0;
 let audio=new Audio("Jaane Kyun.mp3");
 let masterplay=document.getElementById("masterplay");
- let progress_bar=document.getElementById("#progress_bar");
+let progress_bar=document.getElementById("#progress_bar");
+let gif=document.getElementById('music_gif');
 
 
  masterplay.addEventListener('click',()=>{
     if(audio.paused || audio.currentTime<=0){
         audio.play();
-        masterplay.classList.remove("fa-regular fa-circle-play");
-        masterplay.classList.add("fa-solid fa-circle-pause");
+        masterplay.classList.remove("fa-circle-play");
+        masterplay.classList.add("fa-circle-pause");
+        gif.style.opacity = 1;
+
     }
     else{
         audio.pause();
-        masterplay.classList.remove("fa-solid fa-circle-pause");
-        masterplay.classList.add("fa-regular fa-circle-play");
+        masterplay.classList.remove("fa-circle-pause");
+        masterplay.classList.add("fa-circle-play");
+        gif.style.opacity = 0;
     }
  })
- 
+audio.addEventListener("timeupdate",()=>{
+    console.log("Time Update");
+ })
