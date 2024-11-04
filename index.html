@@ -73,15 +73,16 @@
         <div class="song_banner"></div>
     </div>
     <div class="bottom">
-        <input type="range" id="progress_bar" min="0" max="100">
+        <input type="range" id="progress_bar" value="0" min="0" max="100">
     </div>
-    <div id="play_pause">
+    <div id="play_pause"> 
         <div class="icon"><i class="fa-solid fa-circle-arrow-left"></i></div>
-        <div class="icon"><i class="fa-regular fa-circle-play"></i></div>
+        <div class="icon"><i class="fa-regular fa-circle-play" id="masterplay"></i></div>
         <div class="icon"><i class="fa-solid fa-circle-arrow-right"></i></div>
     </div>
+    <p id="song_name">Jaane Kyun </p>
     <div class="song_info">
-        <img src="music_gif.gif"> 
+        <img src="music.gif" id="gif"> 
     </div>
     <script src="script.js"></script>
 </body>
