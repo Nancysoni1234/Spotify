@@ -5,8 +5,8 @@
  let songindex=0;
 let audio=new Audio("Jaane Kyun.mp3");
 let masterplay=document.getElementById("masterplay");
-let progress_bar=document.getElementById("#progress_bar");
-let gif=document.getElementById('music_gif');
+let progress_bar=document.getElementById("progress_bar");
+let gif=document.getElementById("gif");
 
 
  masterplay.addEventListener('click',()=>{
@@ -26,4 +26,9 @@ let gif=document.getElementById('music_gif');
  })
 audio.addEventListener("timeupdate",()=>{
     console.log("Time Update");
+    progress=parseInt((audio.currentTime/audio.duration)*100);//parseInt=Percentage in int
+    progress_bar.value=progress;
+ })
+ progress_bar.addEventListener("change",()=>{
+    audio.currentTime=((progress_bar.value * audio.duration)/100);
  })
