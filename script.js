@@ -3,7 +3,7 @@
 
 
  let songindex=0;
-let audio=new Audio("Jaane Kyun.mp3");
+let audio=new Audio("Jaane Kyun5.mp3");
 let masterplay=document.getElementById("masterplay");
 let progress_bar=document.getElementById("progress_bar");
 let gif=document.getElementById("gif");
@@ -15,7 +15,6 @@ let gif=document.getElementById("gif");
         masterplay.classList.remove("fa-circle-play");
         masterplay.classList.add("fa-circle-pause");
         gif.style.opacity = 1;
-
     }
     else{
         audio.pause();
