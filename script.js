@@ -75,16 +75,30 @@ mplay.forEach((element,i)=>{
         // audio.play();
     })
 })
+document.getElementById('next').addEventListener('click',()=>{
+    if(songIndex>=9){
+        songIndex=0
+    }
+    else{
+        songIndex +=1;
+    }
+    audioElement.src = 'songs/$(songIndex+1).mp3';
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterplay.classlist.remove('fa-circle-play');
+    masterplay.classlist.add('fa-circle-pause');
+})
+
 document.getElementById('previous').addEventListener('click',()=>{
     if(songIndex<=0){
         songIndex=0;
     }
     else{
-        songIndex +=1;
+        songIndex -=1;
     }
-    audioElement.src =songs/$(songIndex+1).mp3;
+    audioElement.src = 'songs/$(songIndex+1).mp3';
     audioElement.currentTime = 0;
-    audioElement,play();
+    audioElement.play();
     masterplay.classlist.remove('fa-circle-play');
-    masterplay.classlist.remove('fa-circle-pause');
+    masterplay.classlist.add('fa-circle-pause');
 })
